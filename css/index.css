@@ -1,0 +1,329 @@
+/*PC导航 start*/
+.nav {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:99;
+}
+
+.nav a {
+    width: 110px;
+    height: 44px;
+    line-height: 44px;
+    color: #ccc;
+    font-weight: 400;
+    text-align: center;
+}
+.nav .search {
+    color: white;
+}
+.nav a:hover {
+    color: white;
+}
+.nav .txt, .nav .search {
+    display: block;
+}
+.nav .toggleBtn {
+    width: 110px;
+    height: 44px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.nav .toggleBtn .line {
+    width: 17px;
+    height: 1px;
+    background-color: white;
+    margin: -6.5px 0;
+    display: none;
+    transform-origin: left;
+    transition: all .5s;
+}
+/*PC导航 end*/
+
+/*搜索框 start*/
+.search-top {
+    width: 100vw;
+    background: black;
+    height: 0vh;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.search-top .search-main {
+    width: 50%;
+}
+.search-main input {
+    width: 90%;
+    height: 32px;
+    background-color: #282828;
+    margin-right: 10px;
+    padding: 0 10px;
+    color: white;
+    border-radius: 6px;
+}
+.search-main .clock-btn span {
+    color: #666;
+}
+#openSearchInput:checked~ .search-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: openSearch 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes openSearch {
+    from {
+        height: 0vw;
+    }
+    to {
+    height: 44px;
+    }
+}
+
+#clockSearchInput:checked~ .search-top {
+    animation: clockSearch 1s;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes clockSearch {
+    from {
+        height: 44px;
+    }
+    to {
+        height: 0vw;
+    }
+}
+
+/*搜索框 end*/
+
+/*768px导航 start*/
+#chooseBtn:checked ~ .toggleBtn .line:nth-child(1) {
+    transform: rotate(-45deg);
+}
+#chooseBtn:checked ~ .toggleBtn .line:nth-child(2) {
+    transform: rotate(45deg);
+}
+/*768px导航 end*/
+
+/*768px导航列表 start*/
+.nav-page {
+    width: 100vw;
+    height: 0vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    /*display: none;*/
+    transition: all .5s;
+}
+.nav-main {
+    width: 100%;
+    height: 100%;
+    padding-top: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.nav-page .search-input {
+    height: 44px;
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px 60px 30px;
+    border-radius: 5px;
+}
+.nav-page .nav-main .search-input input {
+    flex: 1;
+    background-color: transparent;
+    color: white;
+    margin: 0 10px;
+}
+.nav-page .nav-main hr {
+    border-color: #333;
+}
+.nav .nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 60px;
+}
+.nav .nav-list a {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+.nav .nav-list a:last-child {
+    border-bottom: none;
+}
+#chooseBtn:checked ~ .nav-page {
+    /*display: block;*/
+    height: 100vh;
+}
+
+/*768px导航列表 end*/
+
+/*内容容器 start*/
+.content {
+    width: 100%;
+    position: relative;
+    top: 44px;
+    left: 0;
+    background-color: white;
+}
+
+.content-warp {
+    width: 100%;
+    height: 690px;
+    text-align: center;
+    padding-top: 56px;
+}
+.content-txt {
+    color: white;
+}
+.content-txt1 {
+    content: #1d1d1f;
+}
+.content-warp .violator {
+    font-size: 14px;
+    color: #bf4800;
+}
+.content h2 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 84px;
+}
+.content h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #eeeeee;
+}
+.content .black-txt {
+    color: #1d1d1f;
+}
+.content p {
+    font-size: 17px;
+    color: #86868b;
+    margin-top: 10px;
+}
+.content .link {
+    margin-top: 20px;
+}
+.content a {
+    color: #2997ff;
+    margin-right: 30px;
+}
+.content .content-warp a span {
+    margin-left: 5px;
+}
+.content .content-warp:nth-child(1) {
+    background-color: #131313;
+    background-image: url("https://www.apple.com.cn/v/home/l/images/heroes/iphone-se/hero__dvsxv8smkkgi_largetall_2x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    background-position: center bottom;
+}
+.content .content-warp:nth-child(2) {
+    background-color: #fafafa;
+    background-image: url("https://www.apple.com.cn/v/home/l/images/heroes/iphone-11-spring/hero__dvsxv8smkkgi_largetall_2x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: center bottom;
+}
+.content .content-warp:nth-child(3) {
+    background-color: #fafafa;
+    background-image: url("https://www.apple.com.cn/v/home/l/images/heroes/ipad-pro/hero__dvsxv8smkkgi_largetall_2x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: center bottom;
+}
+/*内容容器 end*/
+
+/* flex容器 start*/
+.content .content-flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.content .content-flex .content-flex-warp {
+    flex: 1;
+    height: 624px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.content-flex-warp h3 {
+    padding-top: 56px;
+    font-size: 40px;
+    line-height: 54px;
+    color: #1d1d1f;
+    font-weight: 600;
+}
+.content-flex-warp h4 {
+    font-size: 22px;
+    color: #282828;
+    font-weight: 400;
+}
+.content .content-flex-warp:nth-child(1) {
+    margin: 10px 5px 10px 10px;
+    background-color: #fafafa;
+    background-image: url("https://www.apple.com.cn/v/home/l/images/promos/airpods-engraving-refresh/tile__cauwwcyyn9hy_large_2x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 60%;
+    background-position: center bottom;
+}
+.content .content-flex-warp:nth-child(2) {
+    margin: 10px 10px 10px 5px;
+    background-color: #f1f1f3;
+    background-image: url("https://www.apple.com.cn/home/images/promos/back-to-school/tile__cauwwcyyn9hy_large_2x.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 58%;
+    background-position: center bottom;
+}
+/* flex容器 end*/
+
+/*底部 start*/
+.footer {
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f7;
+}
+.footer-wrap {
+    width: 1024px;
+    margin: auto;
+    padding: 20px;
+}
+.footer-wrap p {
+    color: #86868b;
+    font-size: 10px;
+    line-height: 22px
+}
+.footer-wrap hr {
+    margin: 20px 0;
+    border-color: #fff;
+}
+/*底部 end*/
+
+
+
+/*768px导航 start*/
+/*768px导航 end*/

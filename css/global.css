@@ -1,0 +1,21 @@
+/* 初始化 start*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+input {
+    border: none;
+    outline: transparent;
+}
+
+/* 初始化 　end*/
+
+/* 颜色变量 start*/
+
+/* 颜色变量 end*/

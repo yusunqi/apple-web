@@ -1,0 +1,150 @@
+/* 设置屏幕小于768px start*/
+@media only screen and (max-width: 768px) {
+    .nav .txt, .nav .search {
+        display: none;
+    }
+    .nav .toggleBtn .line {
+        display: block;
+    }
+    .nav {
+        justify-content: space-between;
+    }
+    .nav .logo {
+        z-index: 100;
+    }
+    .nav .toggleBtn {
+        display: flex;
+        z-index:100;
+    }
+    .nav a, .nav .toggleBtn {
+        width: 60px;
+    }
+    .nav .toggleBtn {
+        order: 1;
+    }
+    .nav .logo {
+        order: 2;
+    }
+    .nav .buy {
+        order: 3;
+    }
+}
+
+/* 设置屏幕小于768px end */
+
+/* 设置屏幕小于1070px start */
+@media only screen and (max-width: 1070px) {
+    .content-warp .violator {
+        font-size: 12px;
+    }
+    .content h2 {
+        font-size: 46px;
+        font-weight: 600;
+    }
+    .content h3 {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .content p {
+        font-size: 14px;
+    }
+    .content .content-warp:nth-child(1) {
+        background-size: auto 75%;
+    }
+    .content .content-warp:nth-child(2) {
+        background-size: auto 66%;
+    }
+    .content .content-warp:nth-child(3) {
+        background-size: auto 66%;
+    }
+
+    .content-flex-warp h3 {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .content-flex-warp h4 {
+        font-size: 15px;
+    }
+    .content .content-flex-warp:nth-child(1) {
+        background-size: auto 50%;
+        margin: 10px 5px 10px 10px;
+    }
+    .content .content-flex-warp:nth-child(2) {
+        background-size: auto 48%;
+        margin: 10px 10px 10px 5px;
+    }
+    .footer-wrap {
+        width: 80%;
+    }
+}
+/* 设置屏幕小于1070px end */
+
+/* 设置屏幕小于736px start */
+@media only screen and (max-width: 736px) {
+    .content-warp {
+        width: 100%;
+        height: 640px;
+    }
+    .content-warp .violator {
+        font-size: 10px;
+    }
+    .content h2 {
+        font-size: 38px;
+        font-weight: 600;
+    }
+    .content h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .content p {
+        font-size: 11px;
+    }
+    .content .content-warp:nth-child(1) {
+        background-image: url("https://www.apple.com.cn/v/home/l/images/heroes/iphone-se/hero__dvsxv8smkkgi_small_2x.jpg");
+        background-size: auto 60%;
+        background-position: center bottom;
+    }
+    .content .content-warp:nth-child(2) {
+        background-size: auto 55%;
+    }
+    .content .content-warp:nth-child(3) {
+        background-size: auto 55%;
+    }
+    .content .content-flex {
+        display: flex;
+        flex-direction: column;
+        height: 1000px;
+    }
+    .content-flex-warp h3 {
+        font-size: 26px;
+        font-weight: 600;
+    }
+    .content-flex-warp h4 {
+        font-size: 12px;
+    }
+    .content .content-flex-warp:nth-child(1) {
+        background-size: auto 50%;
+        margin: 10px 10px 5px 10px;
+    }
+    .content .content-flex-warp:nth-child(2) {
+        background-size: auto 48%;
+        margin: 5px 10px 10px 10px;
+    }
+}
+/* 设置屏幕小于736px end */
+
+/* 设置屏幕小于375px end */
+@media only screen and (max-width: 375px) {
+    h1,h2,h3,h4,span, .content p, .link, .content-warp, .content .content-flex, .footer-wrap{
+        width: 375px;
+    }
+    .content-warp .violator {
+        display: block;
+        width: 375px;
+    }
+    .footer-wrap p {
+        width: 86%;
+    }
+
+}
+/* 设置屏幕小于375px end */
